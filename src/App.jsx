@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import BookDeatils from "./BookDetails";
 import CreateNewBook from "./Create"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
           
           <Route exact path="/books/:id">
             <BookDeatils />
+          </Route>
+
+
+          <Route path="*">
+            <NotFound />
           </Route>
 
         </Switch>
