@@ -13,7 +13,7 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/d">
+          <Route exact path="/create">
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, mollitia!</div>
           </Route>
           
