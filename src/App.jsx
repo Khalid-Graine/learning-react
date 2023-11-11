@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import BookDeatils from "./BookDetails";
+import CreateNewBook from "./Create"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           </Route>
 
           <Route exact path="/create">
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, mollitia!</div>
+          <CreateNewBook /> 
           </Route>
           
           <Route exact path="/books/:id">
