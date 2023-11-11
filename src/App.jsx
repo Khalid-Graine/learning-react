@@ -1,20 +1,25 @@
 import "./App.css";
-import BooksList from "./BooksList";
-import useFetch from "./usefetch";
+import Home from "./Home";
+import NavBar from "./NavBar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
-  const {
-    data: books,
-    isLoading,
-    error,
-  } = useFetch("http://localhost:8000/books");
-
   return (
-    <div className="App">
-      {error && <div className="text-red-500">{error}</div>}
-      {isLoading && <p>loading ... </p>}
-      {books && <BooksList books={books} />}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/d">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, mollitia!</div>
+          </Route>
+          
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
