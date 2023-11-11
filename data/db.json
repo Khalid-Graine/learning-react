@@ -1,6 +1,11 @@
 {
   "books": [
     {
+      "id": 0,
+      "title": "automic habit",
+      "author": "james clear"
+    },
+    {
       "id": 1,
       "title": "automic habit",
       "author": "james clear"
