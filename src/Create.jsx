@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom"
 
 const CreateNewBook = () => {
+  const history = useHistory();
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const book = { title, author };
@@ -19,7 +21,8 @@ const CreateNewBook = () => {
       body: JSON.stringify(book),
     }).then((res) => {
         if(res.ok) {
-          setIsLoading(false)
+          setIsLoading(false);
+          history.push('/');
         }
      
     });
