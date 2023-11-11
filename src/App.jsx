@@ -1,32 +1,13 @@
 import "./App.css";
-import { useState } from "react";
-import { useEffect } from "react";
 import BooksList from "./BooksList";
+import useFetch from "./usefetch";
 
 function App() {
-  const [books, setBook] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    fetch("http://localhost:8000/books")
-      .then((res) => {
-        if(res.ok) {
-          return res.json();
-        } else {
-          throw Error('could not fetch the data');
-        }
-        
-      })
-      .then((data) => {
-        setBook(data);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setIsLoading(false);
-      });
-  }, []);
+  const {
+    data: books,
+    isLoading,
+    error,
+  } = useFetch("http://localhost:8000/books");
 
   return (
     <div className="App">
