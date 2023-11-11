@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "automic habit",
+      "author": "james clear"
+    },
+    {
+      "id": 2,
+      "title": "la zone comfort",
+      "author": "tony robins"
+    },
+    {
+      "id": 3,
+      "title": "meditations",
+      "author": "james xract"
+    }
+  ]
+}
