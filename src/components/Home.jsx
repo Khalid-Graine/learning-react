@@ -2,6 +2,7 @@ import useFetch from "./usefetch";
 import BooksList from "./BooksList";
 
 const Home = () => {
+  console.log('BooksList is rednred ')
   const {
     data: books,
     isLoading,
